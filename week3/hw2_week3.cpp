@@ -6,6 +6,7 @@ template<typename T>
 class LinkedList {
 public:
     LinkedList() : head(nullptr) {}
+    ~LinkedList();
 
     bool empty() const;                          // проверка списка на пустоту
 
@@ -48,6 +49,11 @@ struct LinkedList<T>::Node {
 
     Node(const T& data) : data(data), next(nullptr) {};
 };
+
+template<typename T>
+LinkedList<T>::~LinkedList() {
+    clear();
+}
 
 template<typename T>
 bool LinkedList<T>::empty() const {
