@@ -1,7 +1,6 @@
 #include <iostream>
 #include <memory>
 #include <stdexcept>
-#include <vector>
 
 template<typename T>
 class LinkedList {
